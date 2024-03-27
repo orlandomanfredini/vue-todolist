@@ -73,14 +73,13 @@ const { createApp } = Vue
         
         addTodo(){
              this.actions.push(this.actionAdd)
+
+
+             if(this.actionAdd.text !== ''){
+                this.actionAdd.text = '';
+             }
             
         },
-        resetInput(string){
-            if(string !== ''){
-                string = '';
-
-                return string
-            }
-        }
+        
     }
   }).mount('#app')
