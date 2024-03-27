@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(229, 224, 224);
+}
+
+ul, li, menu{
+    list-style: none;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.card-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header{
+    background-color: cornflowerblue;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    text-align: center;
+}
+
+.card-body{
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
