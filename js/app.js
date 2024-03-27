@@ -11,6 +11,12 @@
 // Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 
 
+// MILESTONE 2
+// Visualizzare a fianco ad ogni item ha una “x”:
+// cliccando su di essa, il todo viene rimosso dalla lista.
+
+
+
 const { createApp } = Vue
 
   createApp({
@@ -51,6 +57,9 @@ const { createApp } = Vue
       }
     },
     methods:{
-        
+        remove(i){
+            console.log(i)
+            this.actions.splice(i, 1)
+        }
     }
   }).mount('#app')

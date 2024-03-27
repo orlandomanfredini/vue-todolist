@@ -12,6 +12,10 @@ ul, li, menu{
     list-style: none;
 }
 
+i{
+    text-decoration: none;
+}
+
 .container{
     max-width: 800px;
     margin: 0 auto;
@@ -39,7 +43,10 @@ ul, li, menu{
 
 .list-actions li{
     padding: 5px 10px;
+    display: flex;
+    justify-content:space-between;
 }
+
 
 
 /* UTILITY */
@@ -47,3 +54,9 @@ ul, li, menu{
 .text-overline{
     text-decoration: line-through;
 }
+
+/* .box-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */

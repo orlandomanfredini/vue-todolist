@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/aa1661fd5d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,11 @@
                     <div class="card-body">
                         <ul class="list-actions">
                             <li v-for="(action, i) in actions" :class="action.done === true ? 'text-overline' : ''">
-                                {{action.text}}
+                                    {{action.text}}
+
+                                <div class="icon">
+                                    <i @click="remove(i)" class="fa-solid fa-x"></i>
+                                </div>    
                             </li>
                         </ul>
                     </div>
