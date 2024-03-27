@@ -24,62 +24,66 @@
 
 const { createApp } = Vue
 
-  createApp({
+createApp({
     data() {
-      return {
-        actionAdd: {
-            text : '',
-            done : false,
-        },
-        textDecoration: 'text-overline',
-        message: 'VUE TODOLIST',
-        actions: [
-            {
-                text: 'Comparare arance',
+        return {
+            actionAdd: {
+                text: '',
                 done: false,
             },
-            {
-                text: 'Comparare cibo cani',
-                done: false,
-            },
-            {
-                text: 'Andare dal commercialista',
-                done: true,
-            },
-            {
-                text: 'Studiare Vue',
-                done: true,
-            },
-            {
-                text: 'Andare a caricare furgone',
-                done: false,
-            },
-            {
-                text: 'Fare trasloco dalla nonna',
-                done: true,
-            },
-            {
-                text: 'Fare esercizio del pomeriggio',
-                done: false,
-            },
-        ]
-      }
+            textDecoration: 'text-overline',
+            message: 'VUE TODOLIST',
+            actions: [
+                {
+                    text: 'Comparare arance',
+                    done: false,
+                },
+                {
+                    text: 'Comparare cibo cani',
+                    done: false,
+                },
+                {
+                    text: 'Andare dal commercialista',
+                    done: true,
+                },
+                {
+                    text: 'Studiare Vue',
+                    done: true,
+                },
+                {
+                    text: 'Andare a caricare furgone',
+                    done: false,
+                },
+                {
+                    text: 'Fare trasloco dalla nonna',
+                    done: true,
+                },
+                {
+                    text: 'Fare esercizio del pomeriggio',
+                    done: false,
+                },
+            ]
+        }
     },
-    methods:{
-        remove(i){
+    methods: {
+        remove(i) {
             console.log(i)
             this.actions.splice(i, 1)
         },
-        
-        addTodo(){
-             this.actions.push(this.actionAdd)
 
+        addTodo() {
+            const newTodo = {
+                text: this.actionAdd.text,
+                done: false,
+            };
+            this.actions.push(newTodo);
+            this.actionAdd.text = '';
 
-             if(this.actionAdd.text !== ''){
-                this.actionAdd.text = '';
-             }
-            
+            //  if(this.actionAdd.text !== ''){
+            //     this.actionAdd.text = '';
+            //  }
+
         },
-        
+
     }
-  }).mount('#app')
+}).mount('#app')
