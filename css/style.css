@@ -37,3 +37,13 @@ ul, li, menu{
     padding: 20px;
 }
 
+.list-actions li{
+    padding: 5px 10px;
+}
+
+
+/* UTILITY */
+
+.text-overline{
+    text-decoration: line-through;
+}

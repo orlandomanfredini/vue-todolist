@@ -16,7 +16,13 @@
                     <div class="card-header">
                         <h4>TODOLIST</h4>
                     </div>
-                    <div class="card-body"></div>
+                    <div class="card-body">
+                        <ul class="list-actions">
+                            <li v-for="(action, i) in actions" :class="action.done === true ? 'text-overline' : ''">
+                                {{action.text}}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

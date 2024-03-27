@@ -16,6 +16,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        textDecoration: 'text-overline',
         message: 'VUE TODOLIST',
         actions: [
             {
@@ -48,5 +49,8 @@ const { createApp } = Vue
             },
         ]
       }
+    },
+    methods:{
+        
     }
   }).mount('#app')
