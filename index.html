@@ -22,7 +22,7 @@
                             <h4>TODOLIST</h4>
                         </div>
                         <div class="input">
-                            <input v-model.trim="actionAdd.text" type="text" placeholder="Aggiungi nota...">
+                            <input v-model.trim="actionAdd.text" @keydown.enter="addTodo" type="text" placeholder="Aggiungi nota...">
                             <button @click="addTodo" @click="resetInput(actionAdd.text)">Aggiungi</button>
                         </div>
                         
