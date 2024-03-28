@@ -84,6 +84,13 @@ createApp({
             //  }
 
         },
+        completeTodo(todo){
+            if(todo.done === false){
+                return todo.done = true
+            }else{
+                return todo.done = false
+            }
+        },
 
     }
 }).mount('#app')

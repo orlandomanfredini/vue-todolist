@@ -29,7 +29,7 @@
                     </div>
                     <div class="card-body">
                         <ul class="list-actions">
-                            <li v-for="(action, i) in actions" :class="action.done === true ? 'text-overline' : ''">
+                            <li v-for="(action, i) in actions" :class="action.done === true ? 'text-overline' : ''" @click="completeTodo(action)">
                                     {{action.text}}
 
                                 <div class="icon">
