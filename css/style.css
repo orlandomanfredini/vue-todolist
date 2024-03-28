@@ -50,6 +50,7 @@ button{
 }
 
 .input input{
+    width: 180px    ;
     border: none;
     background-color: rgba(223, 218, 218, 0.7);
     border-radius: 7px;
@@ -68,6 +69,11 @@ button{
     padding: 5px 10px;
     display: flex;
     justify-content:space-between;
+    border-radius: 8px;
+}
+
+.list-actions li:hover{
+    background-color: rgb(218, 215, 215);
 }
 
 
